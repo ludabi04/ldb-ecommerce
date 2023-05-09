@@ -2,7 +2,7 @@ import { useState } from 'react'
 import foto from './assets/img/foto1.jpg'
 import './Main.css'
 import Swal from 'sweetalert2';
-
+import carrito from '../CartWidget/assets/img/carrito.png'
 
 
 
@@ -63,7 +63,7 @@ const Main = ({ modificar, agregarCarrito }) => {
                 <p>descripcion</p>
                 <div className='botonesAgregar'>
                     <button className='botonSuma' onClick={ sumar }>+</button>
-                    <p>0</p>
+                    <p>{ modificarCarrito}</p>
                     <button className='botonSuma' onClick={ restar }>-</button>
                 </div>
                 <div>
@@ -75,7 +75,7 @@ const Main = ({ modificar, agregarCarrito }) => {
                 <p>descripcion</p>
                 <div className='botonesAgregar'>
                     <button className='botonSuma' onClick={ sumar }>+</button>
-                    <p>0</p>
+                    <p>{ modificarCarrito}</p>
                     <button className='botonSuma' onClick={ restar }>-</button>
                 </div>
                 <div>
@@ -84,7 +84,7 @@ const Main = ({ modificar, agregarCarrito }) => {
             </div>
             <div className='contadorCarrito'>
                 <div>{ actualizarCarrito }</div>
-                <img src="" alt="carrito" className='carritoImg' />
+                <img src={carrito} alt="carrito" className='carritoImg' />
             </div>
         </div>
     )
