@@ -1,0 +1,16 @@
+.botonesAgregar {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: .7rem;
+}
+
+.botonOperar {
+    width: 1rem;
+    height: 1rem;
+}

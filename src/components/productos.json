@@ -4,7 +4,8 @@
     "titulo": "SLIM TAPER TWILL DILL GREEN",
     "descripcion": "Pantalón denim 5 bolsillos, de pierna confortable en la parte superior afinando hacia el tobillo sin ajustar. Cartera de acceso con cierre, botones y remaches con logos. Detalles en cuero. Fit slim taper.",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 6,
+    "precio": 13.999,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/35953/sabana_0INHB340375-2.jpg"
   },
   {
@@ -13,6 +14,7 @@
     "descripcion": "Pantalón denim 5 bolsillos, cartera de acceso con cierre, logo bordado en bolsillo trasero.",
     "categoria": "Jean",
     "stock": 10,
+    "precio": 17.999,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/35210/sabana_0HNHB120010-1.jpg"
   },
   {
@@ -20,7 +22,8 @@
     "titulo": "Producto 1",
     "descripcion": "Descripción del producto 1",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 5,
+    "precio": 21.999,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/35210/sabana_0HNHB120010-1.jpg"
   },
   {
@@ -28,7 +31,8 @@
     "titulo": "5 PKT DENIM RELAXED",
     "descripcion": "pantalon denim 5 bolsillos, de calce relajado, con pierna ancha y largo a los tobillos. cartera de acceso con cierre, botones y remaches con logos. detalles en cuero. fit relaxed.",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 4,
+    "precio": 12.999,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36451/0INHB255019-2.jpg"
   },
   {
@@ -36,7 +40,8 @@
     "titulo": "SLIM TAPER DENIM EVERYDAY INDIGO",
     "descripcion": "pantalon denim 5 bolsillos, de pierna confortable en la parte superior afinando hacia el tobillo sin ajustar. cartera de acceso con cierre, botones y remaches con logos. detalles en cuero. fit slim taper. new!",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 7,
+    "precio": 7000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36461/0INHB340071-2.jpg"
   },
   {
@@ -44,7 +49,8 @@
     "titulo": "5 PKT DENIM RELAXED",
     "descripcion": "Pantalón largo a los tobillos, fit relax.",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 8,
+    "precio": 5000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36062/0HNHB255084-1.jpg"
   },
   {
@@ -52,7 +58,8 @@
     "titulo": "5 PKT DENIM STRAIGHT",
     "descripcion": "pantalon denim 5 bolsillos, de pierna recta desde cadera a tobillo, cartera de acceso con cierre. botones y remaches matalicos con logo. detalles en cuero. fit straight.",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 2,
+    "precio": 11000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36456/0INHB270026-2.jpg"
   },
   {
@@ -60,7 +67,8 @@
     "titulo": "5 PKT DENIM SKINNY",
     "descripcion": "Pantalón denim 5 bolsillos, cartera de acceso con cierre y logo bordado en bolsillo trasero.",
     "categoria": "Jean",
-    "stock": 10,
+    "stock": 3,
+    "precio": 4000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36057/0HNHB120019-1.jpg"
   }
  ]
