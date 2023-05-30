@@ -9,7 +9,7 @@ const RedesSociales = () => {
         <div className="redesSociales">
             <Link to="http://www.facebook.com"><img src={facebook} alt="" className='redesSociales face'/></Link>
             <Link to="http://www.facebook.com"><img src={instagram} alt="" className='redesSociales Insta'/></Link>
-            <Link to="http://www.instagram.com"><img src={whatsapp} alt="" className='redesSociales Whatsapp'/></Link>
+            <Link to="https://wa.me/5491168598612"><img src={whatsapp} alt="" className='redesSociales Whatsapp'/></Link>
             
 
         </div>
