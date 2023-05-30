@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productos from '../productos.json'
 import ItemDetail from "../ItemDetail/ItemDetail";
-import ItemCount from "../ItemCount/ItemCount";
 
 
 const ItemDetailContainer = () => {
