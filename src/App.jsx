@@ -24,7 +24,7 @@ function App() {
           {/* <Route path={"/*"} element={<Error404 />} /> */}
         </Routes>
         { <RedesSociales className="redesSociales" />}
-        <Footer/>
+        <Footer className="footer"/>
       </BrowserRouter>
     </div>
   );

@@ -1,0 +1,45 @@
+.titulo {
+    padding: 2rem;
+}
+
+.titulo2 {
+    padding-left: 5%;
+} 
+.textoTitulo2 {
+    width:30%;
+    padding-left: 1rem;
+}
+
+.parrafoImagen{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulo3 {
+    padding-left: 5%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+} 
+.parrafoImagen3 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textoTitulo3 {
+    width: 50%;
+}
+
+.parrafo3 {
+    width: 50%;
+    padding-left: 12%;
+}
+
+.imagen3 {
+    padding-right: 5%;
+}

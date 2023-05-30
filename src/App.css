@@ -3,13 +3,10 @@
 }
 .cuerpo {
   background-color: #61dafb;
+  min-height: 99%;
+  
 }
 .redesSociales {
-  display: sticky;
-  bottom: 0;
-}
-
-.footer {
   display: sticky;
   bottom: 0;
 }

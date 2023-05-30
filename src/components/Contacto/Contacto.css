@@ -1,5 +1,18 @@
 .contacto {
     display: flex;
-    flex-direction: row;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+label {
+    width: 5rem;
+}
+
+input {
+    padding-left: 1rem;
+}
+
+boton {
+    text-align: center;
 }

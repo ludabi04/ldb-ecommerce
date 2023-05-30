@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Item.css'
 
 
+
 const Item = ({ producto }) => {
 
     return (
@@ -17,11 +18,12 @@ const Item = ({ producto }) => {
         </Link>
             <div className="itemCount">
                     <ItemCount stock={ producto.stock} />
-            </div>
-          
-            
+            </div>          
         </div>
     )
 }
 
 export default Item;
+
+
+
