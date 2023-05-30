@@ -70,5 +70,23 @@
     "stock": 3,
     "precio": 4000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36057/0HNHB120019-1.jpg"
+  },
+  {
+    "id": 9,
+    "titulo": "REMERA ESCOTE V",
+    "descripcion": "Remera 100% algodon peinado, con cierre color blanco",
+    "categoria": "Remera",
+    "stock": 5,
+    "precio": 11000,
+    "imagen": "https://i.ibb.co/NL18tjQ/D-NQ-NP-2-X-901281-MLA47932117388-102021-F.webp"
+  },
+   {
+    "id": 10,
+    "titulo": "REMERA ESCOTE V",
+    "descripcion": "Remera 100% algodon peinado, con cierre color bordo",
+    "categoria": "Remera",
+    "stock": 5,
+    "precio": 11000,
+    "imagen": "https://i.ibb.co/BPrGfGK/D-NQ-NP-2-X-939084-MLA47932127281-102021-F.webp"
   }
  ]

@@ -4,6 +4,7 @@ import productos from '../productos.json'
 import ItemDetail from "../ItemDetail/ItemDetail";
 import ItemCount from "../ItemCount/ItemCount";
 
+
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const { id } = useParams();
@@ -12,7 +13,7 @@ const ItemDetailContainer = () => {
         const promesa = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(productos.find(item => item.id === parseInt(id)));
-            }, 2000);
+            }, );
         });
 
         promesa.then(data => {
@@ -22,8 +23,8 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <ItemDetail producto={ item } />
-            <ItemCount />
+            <ItemDetail producto={ item } precio={ "$" } />
+            
 
         </>
     )
