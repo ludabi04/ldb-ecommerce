@@ -5,11 +5,12 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Nosotros from './components/Nosotros/Nosotros';
 import Contacto from './components/Contacto/Contacto';
+import RedesSociales from './components/RedesSociales/RedesSociales';
 import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <div className='cuerpo'>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -22,7 +23,8 @@ function App() {
           {/* <Route path={"/destacados"} element={<Destacado />} /> */}
           {/* <Route path={"/*"} element={<Error404 />} /> */}
         </Routes>
-        { <Footer />}
+        { <RedesSociales className="redesSociales" />}
+        <Footer/>
       </BrowserRouter>
     </div>
   );

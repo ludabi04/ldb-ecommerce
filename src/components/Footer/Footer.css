@@ -1,18 +1,9 @@
-.redesSociales {
-    width: 35px;
+.Footer {
+    height: 3rem;
+    text-align: center;
+    align-items: center;
     position: sticky;
     bottom: 0;
-}
+    background-color: rgb(244, 244, 244);
 
-.face {
-    padding-left: .4rem;
-    padding-bottom: .3rem;
-}
-
-.Insta {
-    width: 45px;
-}
-
-.Whatsapp {
-    width: 45px;
 }

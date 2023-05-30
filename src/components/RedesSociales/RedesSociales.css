@@ -1,0 +1,21 @@
+.redesSociales {
+    width: 35px;
+    position: sticky;
+    bottom: 20%;
+    left: 97%;
+    padding-right: 1rem;
+
+}
+
+.face {
+    padding-left: .4rem;
+    padding-bottom: .3rem;
+}
+
+.Insta {
+    width: 45px;
+}
+
+.Whatsapp {
+    width: 45px;
+}

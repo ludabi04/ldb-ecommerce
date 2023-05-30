@@ -1,7 +1,18 @@
 .App {
   text-align: center;
 }
+.cuerpo {
+  background-color: #61dafb;
+}
+.redesSociales {
+  display: sticky;
+  bottom: 0;
+}
 
+.footer {
+  display: sticky;
+  bottom: 0;
+}
 
 .App-logo {
   height: 40vmin;
