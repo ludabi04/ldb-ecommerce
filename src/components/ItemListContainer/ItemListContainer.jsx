@@ -3,6 +3,7 @@ import { useState } from "react";
 import productos from '../productos.json'
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import './ItemListContainer.css'
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -21,11 +22,11 @@ const ItemListContainer = () => {
     }, [id]);
 
     return (
-        <div className="container my-5">
-            <div className="row">
+        
+            <div className="listContainer">
                 <ItemList productos={ items } />
             </div>
-        </div>
+        
     )
 }
 

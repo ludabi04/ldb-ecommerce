@@ -1,6 +1,16 @@
 .botonesAgregar {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.agregarCarrito {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.textoCarrito {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .botones {
@@ -8,6 +18,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-bottom: .7rem;
+    
 }
 
 .botonOperar {

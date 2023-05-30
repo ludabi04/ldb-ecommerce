@@ -1,0 +1,40 @@
+.tituloCard {
+    height: 4rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+
+.descripcionCard {
+    height: 8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.itemCount {
+    padding-top: 1rem;
+}
+
+.precioCard {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.imgCard {
+    height: 25rem;
+    border: .2rem solid rgb(44, 63, 100);
+}
+
+.cardContainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   width: 20rem;
+   
+}
