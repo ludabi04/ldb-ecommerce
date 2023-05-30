@@ -2,14 +2,24 @@
     display: grid;
     grid-template-areas: 
     "nombreTienda menuBotones contadorCarrito";
-    grid-template-columns: 3fr 8fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    background-color: rgb(244, 244, 244);
 
+}
+
+.itemNav {
+    color: rgb(28, 32, 150);
+    font-size: 1.5rem;
 }
 
 .nombreTienda {
     grid-area: nombreTienda;
     text-align: start;
     padding-left: 1rem;
+    width: 6rem;
 }
 
 .menuBotones {

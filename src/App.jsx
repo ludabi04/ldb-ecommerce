@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Nosotros from './components/Nosotros/Nosotros';
 import Contacto from './components/Contacto/Contacto';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           {/* <Route path={"/destacados"} element={<Destacado />} /> */}
           {/* <Route path={"/*"} element={<Error404 />} /> */}
         </Routes>
-        {/* <Footer /> */}
+        { <Footer />}
       </BrowserRouter>
     </div>
   );
