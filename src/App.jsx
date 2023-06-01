@@ -7,6 +7,7 @@ import Nosotros from './components/Nosotros/Nosotros';
 import Contacto from './components/Contacto/Contacto';
 import RedesSociales from './components/RedesSociales/RedesSociales';
 import Footer from './components/Footer/Footer';
+import Error404 from './components/Error404/Error404';
 
 function App() {
   return (
@@ -20,8 +21,7 @@ function App() {
           <Route path={ "/nosotros" } element={ <Nosotros /> } />
           <Route path={ "/contacto" } element={ <Contacto /> } />
           
-          {/* <Route path={"/destacados"} element={<Destacado />} /> */}
-          {/* <Route path={"/*"} element={<Error404 />} /> */}
+          <Route path={"/*"} element={<Error404 />} />
         </Routes>
         { <RedesSociales className="redesSociales" />}
         <Footer className="footer"/>

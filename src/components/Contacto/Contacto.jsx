@@ -33,7 +33,7 @@ const Contacto = () => {
     
 
     return (
-        <div > {resultado} </div>
+        <div className="vh-100"> {resultado} </div>
     )
 }
 
