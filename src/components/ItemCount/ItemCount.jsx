@@ -31,12 +31,13 @@ const ItemCount = ({ stock, inicio, onAdd }) => {
             setItemsStock(itemsStock - items);
             setItems(1);
             setItemAdded(true);
-            onAdd(true);
+            onAdd(items);
             console.log("Seleccionaste: " + items + " Productos al Carrito!\nTe quedan: " + itemsStock + " Productos disponibles!");
 
         };
     }
 
+  
     
     useEffect(() => {
         setItemsStock(stock);
