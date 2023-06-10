@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 import Swal from "sweetalert2";
 import './ItemCount.css';
+import { Link } from "react-router-dom";
 
-const ItemCount = ({ stock, inicio }) => {
+const ItemCount = ({ stock, inicio, onAdd }) => {
     
     const [items, setItems] = useState(inicio);
     const [itemsStock, setItemsStock] = useState(stock);
+    const [itemAdded, setItemAdded ] = useState(false);
     const [carrito, setCarrito] = useState(0)
 
     const sumar = () => {
@@ -25,9 +27,15 @@ const ItemCount = ({ stock, inicio }) => {
 
     
 
-    const onAdd = () => {
-        setCarrito(carrito + items)
-        console.log(items)
+    const addToCart = () => {
+        if (items <= itemsStock) {
+            setItemsStock(itemsStock - items);
+            setItems(1);
+            setItemAdded(true);
+            onAdd(items);
+            console.log("Seleccionaste: " + items + " Productos al Carrito!\nTe quedan: " + itemsStock + " Productos disponibles!");
+
+        };
     }
 
     useEffect(() => {
@@ -39,7 +47,6 @@ const ItemCount = ({ stock, inicio }) => {
 
     useEffect(() => {
         setItems(1);
-         
     }, [carrito])
 
 
@@ -54,7 +61,7 @@ const ItemCount = ({ stock, inicio }) => {
                 <button onClick={ restar } className="botonOperar">-</button>
             </div>
             <div className="agregarCarrito text-center" >
-                <button onClick={ onAdd } disabled={ items < 1 }>Agregar</button>
+                { itemAdded ? <Link to={"/cart"} className="btn btn-light">Finalizar Compra</Link> : <Link onClick={ addToCart } disabled={ items < -1 } className="btn btn-light">Agregar</Link> } 
             </div>
         </div>
     )

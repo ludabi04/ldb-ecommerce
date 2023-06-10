@@ -1,9 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import ItemCount from "../ItemCount/ItemCount";
-import { Link } from "react-router-dom";
+import { CartContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({ producto, precio, volver }) => {
+    const { addItem } = useContext(CartContext);
     const [item, setItem] = useState({});
+
+    const onAdd = (quantity) => {
+        addItem(item, quantity);
+    }
+
 
     useEffect(() => {
         setItem(producto);
@@ -20,8 +26,7 @@ const ItemDetail = ({ producto, precio, volver }) => {
                     <h1 className="text-center">{ item.titulo } </h1>
                     <h3 className="text-center">{ item.descripcion }</h3>
                     <p className="text-center"><span><b>{ precio }{ item.precio }</b></span></p>
-                    <ItemCount stock={ producto.stock } />
-                    <Link to={ "/" } className="text-dark text-decoration-none" detalle={precio}><div className="text-center"><button>volver</button></div></Link>
+                    <ItemCount stock={ item.stock } onAdd={ onAdd} />
 
                 </div>
             </div>

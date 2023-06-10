@@ -8,24 +8,30 @@ import Contacto from './components/Contacto/Contacto';
 import RedesSociales from './components/RedesSociales/RedesSociales';
 import Footer from './components/Footer/Footer';
 import Error404 from './components/Error404/Error404';
+import Cart from './components/Cart/Cart';
+import CartContextProvider from './components/CartContext/CartContext';
+
 
 function App() {
   return (
     <div className='cuerpo'>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path={"/"} element={<ItemListContainer />} />
-          <Route path={"/category/:id"} element={<ItemListContainer />} />
-          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-          <Route path={ "/nosotros" } element={ <Nosotros /> } />
-          <Route path={ "/contacto" } element={ <Contacto /> } />
-          
-          <Route path={"/*"} element={<Error404 />} />
-        </Routes>
-        { <RedesSociales className="redesSociales" />}
-        <Footer className="footer"/>
-      </BrowserRouter>
+      <CartContextProvider> 
+        <BrowserRouter>
+            <NavBar />
+            <Routes>
+              <Route path={"/"} element={<ItemListContainer />} />
+              <Route path={"/category/:id"} element={<ItemListContainer />} />
+              <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+              <Route path={ "/nosotros" } element={ <Nosotros /> } />
+              <Route path={ "/cart" } element={ <Cart /> } />
+              <Route path={ "/contacto" } element={ <Contacto /> } />
+              
+              <Route path={"/*"} element={<Error404 />} />
+            </Routes>
+            { <RedesSociales className="redesSociales" />}
+            <Footer className="footer"/>
+          </BrowserRouter>
+        </CartContextProvider>
     </div>
   );
 }
