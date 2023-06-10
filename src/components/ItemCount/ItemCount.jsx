@@ -8,7 +8,6 @@ const ItemCount = ({ stock, inicio, onAdd }) => {
     const [items, setItems] = useState(inicio);
     const [itemsStock, setItemsStock] = useState(stock);
     const [itemAdded, setItemAdded ] = useState(false);
-    const [carrito, setCarrito] = useState(0)
 
     const sumar = () => {
         if (items < itemsStock) {
@@ -32,36 +31,30 @@ const ItemCount = ({ stock, inicio, onAdd }) => {
             setItemsStock(itemsStock - items);
             setItems(1);
             setItemAdded(true);
-            onAdd(items);
+            onAdd(true);
             console.log("Seleccionaste: " + items + " Productos al Carrito!\nTe quedan: " + itemsStock + " Productos disponibles!");
 
         };
     }
 
+    
     useEffect(() => {
-        if (carrito + items > itemsStock) {
-            Swal.fire("no podes agregar mas ")
-            setItems(items - 1)
-        } 
-    }, [items])
-
-    useEffect(() => {
-        setItems(1);
-    }, [carrito])
+        setItemsStock(stock);
+    }, [stock])
 
 
     
 
     return (
         <div className="botonesAgregar">
-            {<p className="textoCarrito">Carrito : { carrito }  </p>  }
+            {<p className="textoCarrito">Carrito : { items }  </p>  }
             <div className="botones">
                 <button onClick={sumar} className="botonOperar">+</button>
                 <p>{ items }</p>
                 <button onClick={ restar } className="botonOperar">-</button>
             </div>
             <div className="agregarCarrito text-center" >
-                { itemAdded ? <Link to={"/cart"} className="btn btn-light">Finalizar Compra</Link> : <Link onClick={ addToCart } disabled={ items < -1 } className="btn btn-light">Agregar</Link> } 
+                { itemAdded ? <Link to={ "/cart" } className="btn btn-light">Finalizar Compra</Link> : <button type="button" className="btn btn-light" onClick={ addToCart }>Agregar al Carrito</button> }
             </div>
         </div>
     )

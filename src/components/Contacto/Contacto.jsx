@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2'
 import './Contacto.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Contacto = () => {
     const [form, setForm] = useState(false);

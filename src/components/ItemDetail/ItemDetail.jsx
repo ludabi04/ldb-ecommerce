@@ -7,6 +7,7 @@ const ItemDetail = ({ producto, precio, volver }) => {
     const [item, setItem] = useState({});
 
     const onAdd = (quantity) => {
+        console.log("cantidad: " + quantity)
         addItem(item, quantity);
     }
 
@@ -26,7 +27,7 @@ const ItemDetail = ({ producto, precio, volver }) => {
                     <h1 className="text-center">{ item.titulo } </h1>
                     <h3 className="text-center">{ item.descripcion }</h3>
                     <p className="text-center"><span><b>{ precio }{ item.precio }</b></span></p>
-                    <ItemCount stock={ item.stock } onAdd={ onAdd} />
+                    <ItemCount stock={ item.stock } onAdd={ onAdd } inicio={ 1} />
 
                 </div>
             </div>
