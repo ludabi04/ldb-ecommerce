@@ -1,6 +1,8 @@
-import './Nosotros.css'
+import './Nosotros.css';
 
 const Nosotros = () => {
+
+    
     return (
         <div>
             <h1 className='titulo'>Sobre Nosotros...</h1>

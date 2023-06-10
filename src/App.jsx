@@ -8,17 +8,24 @@ import Contacto from './components/Contacto/Contacto';
 import RedesSociales from './components/RedesSociales/RedesSociales';
 import Footer from './components/Footer/Footer';
 import Error404 from './components/Error404/Error404';
+import Cart from './components/Cart/Cart';
+
 
 function App() {
+  
   return (
+   
+
     <div className='cuerpo'>
       <BrowserRouter>
+        <usuario/>
         <NavBar />
         <Routes>
           <Route path={"/"} element={<ItemListContainer />} />
           <Route path={"/category/:id"} element={<ItemListContainer />} />
           <Route path={"/item/:id"} element={<ItemDetailContainer />} />
           <Route path={ "/nosotros" } element={ <Nosotros /> } />
+          <Route path={ "/cart" } element={ <Cart /> } />
           <Route path={ "/contacto" } element={ <Contacto /> } />
           
           <Route path={"/*"} element={<Error404 />} />

@@ -1,10 +1,10 @@
-import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import './Item.css'
+import ItemCount from "../ItemCount/ItemCount";
 
 
 
-const Item = ({ producto }) => {
+const Item = ({ producto, stock }) => {
 
     return (
         <div className="cardContainer"> 
@@ -12,13 +12,11 @@ const Item = ({ producto }) => {
             <div className="cardBody">
                 <img src={ producto.imagen } className="imgCard" alt={ producto.titulo } />
                 <h3 className="tituloCard">{ producto.titulo }</h3>
-                <p className="descripcionCard">{ producto.descripcion }</p>
-                <p className="precioCard">${producto.precio}</p>
+                    <p className="descripcionCard">{ producto.descripcion }</p>
+                    
             </div>
         </Link>
-            <div className="itemCount">
-                    <ItemCount stock={ producto.stock} />
-            </div>          
+                   
         </div>
     )
 }

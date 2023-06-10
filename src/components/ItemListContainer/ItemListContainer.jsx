@@ -4,6 +4,7 @@ import productos from '../productos.json'
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -24,7 +25,7 @@ const ItemListContainer = () => {
     return (
         
             <div className="listContainer">
-                <ItemList productos={ items } />
+            <ItemList productos={ items } /> 
             </div>
         
     )

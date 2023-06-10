@@ -1,61 +1,51 @@
 import { useEffect, useState } from "react"
 import Swal from "sweetalert2";
 import './ItemCount.css';
+import suma from '../img/suma.svg'
+import resta from '../img/resta.svg'
+import { Link } from "react-router-dom";
 
-const ItemCount = ({ stock, inicio }) => {
+const ItemCount = ({ producto, stock, inicio }) => {
     
     const [items, setItems] = useState(inicio);
     const [itemsStock, setItemsStock] = useState(stock);
-    const [carrito, setCarrito] = useState(0)
+    const [itemsAdded, setItemsAdded] = useState(false);
+    const [carrito, setCarrito] = useState(0);
 
-    const sumar = () => {
-        if (items < itemsStock) {
-            setItems(items+ 1)
-        } else {
-            Swal.fire('no hay mas stock')
-        }   
-    }
-    const restar = () => {
-        if(items > 1){
-            setItems(items - 1)
-        } else {
-            Swal.fire('no podes bajar mas')
-        }
-    }
-
-    
 
     const onAdd = () => {
-        setCarrito(carrito + items)
+        setItems(items)
         console.log(items)
     }
 
-    useEffect(() => {
-        if (carrito + items > itemsStock) {
-            Swal.fire("no podes agregar mas ")
-            setItems(items - 1)
-        } 
-    }, [items])
-
-    useEffect(() => {
-        setItems(1);
-         
-    }, [carrito])
+    
 
 
     
 
     return (
-        <div className="botonesAgregar">
-            {<p className="textoCarrito">Carrito : { carrito }  </p>  }
-            <div className="botones">
-                <button onClick={sumar} className="botonOperar">+</button>
-                <p>{ items }</p>
-                <button onClick={ restar } className="botonOperar">-</button>
+
+        <div className="container my-5">
+            <div className="row text-center justify-content-center py-5">
+                <div className="col">
+                        {/* <img src={ suma } alt="sumar" onClick={ sumar } className="btn " width={ 24 } />  */}
+                </div>
+                <div className="col">
+                    <p>{ itemsStock }</p>
+                </div>
+                <div className="col">
+                    {/* <img src={ resta } alt="sumar" onClick={ restar } className="btn" width={ 24 } />  */}
+                </div>
+                    
             </div>
-            <div className="agregarCarrito text-center" >
-                <button onClick={ onAdd } disabled={ items < 1 }>Agregar</button>
-            </div>
+            <div className="row text-center justify-content-center ">
+                <div className="col">
+                    
+                    <button onClick={onAdd}>al</button>
+                    {/* { itemsAdded ? <Link to="/cart" className="btn btn-light my-3">Finalizar Compra</Link> : <Link onClick={ onAdd } disabled={ items < 1 } className="btn btn-light my-3" >Agregar</Link> } */}
+                        
+                    </div>
+                </div>
         </div>
     )
 }

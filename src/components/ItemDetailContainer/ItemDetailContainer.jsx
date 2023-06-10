@@ -15,8 +15,8 @@ const ItemDetailContainer = () => {
             }, );
         });
 
-        promesa.then(data => {
-            setItem(data);
+        promesa.then(datos => {
+            setItem(datos);
         });
     }, [id]);
 

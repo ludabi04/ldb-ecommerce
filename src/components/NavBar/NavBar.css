@@ -1,7 +1,7 @@
 .navbar {
     display: grid;
     grid-template-areas: 
-    "nombreTienda menuBotones contadorCarrito";
+    "nombreTienda menuBotones contadorCarrito usuario";
     grid-template-columns: 1fr 8fr 1fr;
     position: sticky;
     top: 0;
