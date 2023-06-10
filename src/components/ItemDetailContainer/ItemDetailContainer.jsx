@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import productos from '../productos.json'
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Loading from "../Loading/Loading";
 
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const { id } = useParams();
+    const [loading, setLoading] = useState(true)
+ 
 
     useEffect(() => {
         const promesa = new Promise((resolve) => {
@@ -17,12 +20,14 @@ const ItemDetailContainer = () => {
 
         promesa.then(data => {
             setItem(data);
+            setLoading(false)
         });
     }, [id]);
 
     return (
         <>
-            <ItemDetail producto={ item } precio={ "$" } />
+            {loading ? <Loading/> :
+                <ItemDetail producto={ item } precio={ "$" } /> }
             
 
         </>
