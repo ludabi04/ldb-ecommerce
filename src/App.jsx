@@ -14,7 +14,7 @@ import CartContextProvider from './components/CartContext/CartContext';
 
 function App() {
   return (
-    <div className='cuerpo'>
+    <div className='cuerpo vh-100'>
       <CartContextProvider> 
         <BrowserRouter>
             <NavBar />

@@ -1,11 +1,7 @@
 .App {
   text-align: center;
 }
-.cuerpo {
-  background-color: #61dafb;
-  min-height: 99%;
-  
-}
+
 .redesSociales {
   display: sticky;
   bottom: 0;
