@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import trash from '../Img/trash.svg'
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const { cart, removeItem, clear, cartTotal, sumTotal } = useContext(CartContext);
@@ -37,18 +38,20 @@ const Cart = () => {
                             {
                                 cart.map(item => (
                                     <tr key={ item.id }>
-                                        <td><img src={ item.imagen } alt={ item.titulo } width={ 80 } /></td>
-                                        <td>{ item.titulo }</td>
-                                        <td>{ item.cantidad } x ${ item.precio }</td>
-                                        <td className="text-center">${ item.cantidad * item.precio }</td>
-                                        <td className="text-end"><button className="btn" onClick={ () => { removeItem(item.id) } } title="Eliminar Producto"><img src={ trash } alt="Eliminar Producto" /></button></td>
+                                        <td className="align-middle"><img src={ item.imagen } alt={ item.titulo } width={ 80 } /></td>
+                                        <td className="align-middle">{ item.titulo }</td>
+                                        <td className="align-middle">{ item.cantidad } x ${ item.precio }</td>
+                                        <td className="text-center align-middle">${ item.cantidad * item.precio }</td>
+                                        <td className="text-end align-middle"><button className="btn" onClick={ () => { removeItem(item.id) } } title="Eliminar Producto"><img src={ trash } alt="Eliminar Producto" /></button></td>
                                     </tr>
                                 ))
                             }
                             <tr>
-                                <td colSpan={ 3 } className="text-end">Total a Pagar</td>
-                                <td className="text-center">${ sumTotal() }</td>
-                                <td>&nbsp;</td>
+                                <td colSpan={ 3 } className="text-end align-middle">Total a Pagar</td>
+                                <td className="text-center align-middle">${ sumTotal() }</td>
+                            </tr>
+                            <tr>
+                                <td className="text-end" colSpan={5}><Link className="btn btn-ligth align-middle" to={ "/checkout" }>Finalizar compra</Link></td>
                             </tr>
                         </tbody>
                     </table>
