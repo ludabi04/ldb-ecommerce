@@ -7,18 +7,16 @@ import './Item.css'
 const Item = ({ producto }) => {
 
     return (
-        <div className="cardContainer"> 
+        <div className="row text-center"> 
+            <div className="col col-lg-2 justify-content-md-center card border border-0 ">
             <Link to={"/item/" + producto.id} className="text-dark text-decoration-none">
-            <div className="cardBody">
-                <img src={ producto.imagen } className="imgCard" alt={ producto.titulo } />
-                <h3 className="tituloCard">{ producto.titulo }</h3>
-                <p className="descripcionCard">{ producto.descripcion }</p>
-                <p className="precioCard">${producto.precio}</p>
+                    <div className="card-body">
+                        <img src={ producto.imagen } className="card-img-top " alt={ producto.titulo } />
+                <h3>{ producto.titulo }</h3>
+                        <p className="card-text"><span className="text-secondary">{ producto.descripcion }</span></p>
             </div>
-        </Link>
-            <div className="itemCount">
-                    <ItemCount stock={ producto.stock} />
-            </div>          
+                </Link>    
+            </div>        
         </div>
     )
 }

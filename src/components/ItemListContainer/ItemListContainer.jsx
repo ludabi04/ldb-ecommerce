@@ -25,7 +25,7 @@ const ItemListContainer = () => {
 
     return (
 
-        <div className="listContainer">
+        <div className="container my-5">
             { loading ? <Loading /> :
                 <ItemList productos={ items } /> }
         </div>

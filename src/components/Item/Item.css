@@ -24,11 +24,6 @@
 }
 
 
-.imgCard {
-    max-height: 35rem;
-    border: .2rem solid rgb(44, 63, 100);
-}
-
 .cardContainer {
    display: flex;
    flex-direction: column;
