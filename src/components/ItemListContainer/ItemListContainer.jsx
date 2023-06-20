@@ -26,8 +26,9 @@ const ItemListContainer = () => {
     return (
 
         <div className="container my-5">
-            { loading ? <Loading /> :
-                <ItemList productos={ items } /> }
+            <div className="row justify-content-between ">
+                { loading ? <Loading /> : <ItemList productos={ items } /> }
+            </div>
         </div>
 
     )

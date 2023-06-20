@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -12,6 +13,45 @@ const Checkout = () => {
     const { cart, sumTotal } = useContext(CartContext);
 
     const generarOrden = () => {
+        if (nombre.length === 0) {
+            return (toast.error('Falta completar el nombre!', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            }))
+        }
+
+        if (email.length === 0) {
+            return (toast.error('Falta completar el EMAIL!', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            }))
+        }
+
+        if (telefono.length === 0) {
+            return (toast.error('Falta completar el Teléfono!', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            }))
+        }
+
         const buyer = {
             name: nombre, phone: telefono, email: email
         }
@@ -34,7 +74,7 @@ const Checkout = () => {
 
 
     return (
-        <div className="container my-5">
+        <div className="container my-5 vh-100">
             <div className="row">
                 <div className="col-md-4 offset-md-1 align-middle text-center">
                     <form>
@@ -43,12 +83,12 @@ const Checkout = () => {
                             <input type="text" className="form-control" onInput={(e) => {setNombre(e.target.value)}} />
                         </div>
                         <div className="mb-3">
-                            <label for="mail" className="form-label" onInput={ (e) => { setEmail(e.target.value) } }>Email</label>
-                            <input type="mail" className="form-control" />
+                            <label className="form-label">Email</label>
+                            <input type="text" className="form-control" onInput={(e) => {setEmail(e.target.value)}} />
                         </div>
                         <div className="mb-3">
-                            <label for="nombre" className="form-label" onInput={ (e) => { setTelefono(e.target.value) } }>Telefono</label>
-                            <input type="number" className="form-control" />
+                            <label for="nombre" className="form-label" >Telefono</label>
+                            <input type="number" className="form-control" onInput={ (e) => { setTelefono(e.target.value) } } />
                         </div>
                         <button type="button" onClick={generarOrden} className="btn btn-primary">Generar orden</button>
                     </form>
@@ -77,9 +117,9 @@ const Checkout = () => {
             <div className="row">
                 <div className="col text-center">
                     { orderId ?
-                        <div>
-                            <div className="alert alert-warning" role="alert">
-                                <h1 className="fs-2 text-center">Gracias por tu compra { nombre }!</h1>
+                        <div className="py-5">
+                            <div className="alert alert-warning " role="alert">
+                                <h1 className="fs-2 text-center ">Gracias por tu compra { nombre }!</h1>
                                 <p className="fs-6 text-center align-middle">Tu número de orden de compra es: <b>{ orderId }</b></p>
                             </div>
                             <div className="row">

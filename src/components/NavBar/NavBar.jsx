@@ -8,7 +8,7 @@ const NavBar = () => {
             <div className="col-12">
                 <div class="row align-items-center">
                 <div class="col">
-                    <NavLink to={ "/" }><img src={ Logo } alt="" className='nombreTienda' width={42} /></NavLink>
+                    <NavLink to={ "/" }><img src={ Logo } alt="" width={42} /></NavLink>
                 </div>
                 <div class="col small">
                     <NavLink className="nav-link itemNav" activeclassname="text-danger" to={ "/nosotros" }>Nosotros</NavLink>

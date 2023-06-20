@@ -11,6 +11,8 @@ import Error404 from './components/Error404/Error404';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './components/CartContext/CartContext';
 import Checkout from './components/Checkout/Chekout';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -32,7 +34,8 @@ function App() {
             </Routes>
             { <RedesSociales className="redesSociales" />}
             <Footer className="footer"/>
-          </BrowserRouter>
+        </BrowserRouter>
+        <ToastContainer/>
         </CartContextProvider>
     </div>
   );
