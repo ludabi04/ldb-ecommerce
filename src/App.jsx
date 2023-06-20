@@ -13,6 +13,7 @@ import CartContextProvider from './components/CartContext/CartContext';
 import Checkout from './components/Checkout/Chekout';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Gracias from './components/Gracias/Gracias';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
               <Route path={ "/cart" } element={ <Cart /> } />
               <Route path={ "/contacto" } element={ <Contacto /> } />
               <Route path={ "/checkout" } element={ <Checkout /> } />
+              <Route path={ "/gracias/:orderId" } element={ <Gracias /> } />
               
               <Route path={"/*"} element={<Error404 />} />
             </Routes>

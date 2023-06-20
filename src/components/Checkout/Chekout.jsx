@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -68,8 +68,8 @@ const Checkout = () => {
             setOrderId(resultado.id);
         })
             .catch(resultado => {
-            console.log('no se pudo completar la operación')
-        })
+                console.log('no se pudo completar la operación')
+            })
     };
 
 
@@ -80,17 +80,17 @@ const Checkout = () => {
                     <form>
                         <div className="mb-3">
                             <label for="nombre" className="form-label">Nombre</label>
-                            <input type="text" className="form-control" onInput={(e) => {setNombre(e.target.value)}} />
+                            <input type="text" className="form-control" onInput={ (e) => { setNombre(e.target.value) } } />
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Email</label>
-                            <input type="text" className="form-control" onInput={(e) => {setEmail(e.target.value)}} />
+                            <input type="text" className="form-control" onInput={ (e) => { setEmail(e.target.value) } } />
                         </div>
                         <div className="mb-3">
                             <label for="nombre" className="form-label" >Telefono</label>
                             <input type="number" className="form-control" onInput={ (e) => { setTelefono(e.target.value) } } />
                         </div>
-                        <button type="button" onClick={generarOrden} className="btn btn-primary">Generar orden</button>
+                        <button type="button" onClick={ generarOrden } className="btn btn-primary">Generar orden</button>
                     </form>
                 </div>
                 <div className="col-md-4 offset-md-1 align-middle text-center">
@@ -116,23 +116,12 @@ const Checkout = () => {
             </div>
             <div className="row">
                 <div className="col text-center">
-                    { orderId ?
-                        <div className="py-5">
-                            <div className="alert alert-warning " role="alert">
-                                <h1 className="fs-2 text-center ">Gracias por tu compra { nombre }!</h1>
-                                <p className="fs-6 text-center align-middle">Tu número de orden de compra es: <b>{ orderId }</b></p>
-                            </div>
-                            <div className="row">
-                                <div className="text-center col">
-                                    <Link className="btn btn-primary" to="/">Ir al inicio</Link>
-                                </div>
-                            </div>
-                        </div>
+                    { orderId ? <Navigate to={ "/gracias/" + orderId } />
 
                         : "" }
                 </div>
             </div>
-            
+
         </div>
     )
 }
