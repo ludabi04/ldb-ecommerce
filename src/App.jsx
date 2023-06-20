@@ -10,11 +10,14 @@ import Footer from './components/Footer/Footer';
 import Error404 from './components/Error404/Error404';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './components/CartContext/CartContext';
+import Checkout from './components/Checkout/Chekout';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
-    <div className='cuerpo'>
+    <div className='cuerpo vh-100'>
       <CartContextProvider> 
         <BrowserRouter>
             <NavBar />
@@ -25,12 +28,14 @@ function App() {
               <Route path={ "/nosotros" } element={ <Nosotros /> } />
               <Route path={ "/cart" } element={ <Cart /> } />
               <Route path={ "/contacto" } element={ <Contacto /> } />
+              <Route path={ "/checkout" } element={ <Checkout /> } />
               
               <Route path={"/*"} element={<Error404 />} />
             </Routes>
             { <RedesSociales className="redesSociales" />}
             <Footer className="footer"/>
-          </BrowserRouter>
+        </BrowserRouter>
+        <ToastContainer/>
         </CartContextProvider>
     </div>
   );

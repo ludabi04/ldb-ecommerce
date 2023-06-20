@@ -1,15 +1,15 @@
 [
   {
-    "id": 1,
+    "idx": 1,
     "titulo": "SLIM TAPER TWILL DILL GREEN",
     "descripcion": "Pantalón denim 5 bolsillos, de pierna confortable en la parte superior afinando hacia el tobillo sin ajustar.",
     "categoria": "Jean",
     "stock": 6,
-    "precio": 13999,
+    "precio": 13.999,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/35953/sabana_0INHB340375-2.jpg"
   },
   {
-    "id": 2,
+    "idx": 2,
     "titulo": "5 PKT DENIM SKINNY",
     "descripcion": "Pantalón denim 5 bolsillos, cartera de acceso con cierre, logo bordado en bolsillo trasero.",
     "categoria": "Jean",
@@ -18,7 +18,7 @@
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/35210/sabana_0HNHB120010-1.jpg"
   },
   {
-    "id": 3,
+    "idx": 3,
     "titulo": "Producto 1",
     "descripcion": "Descripción del producto 1",
     "categoria": "Jean",
@@ -27,7 +27,7 @@
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/35210/sabana_0HNHB120010-1.jpg"
   },
   {
-    "id": 4,
+    "idx": 4,
     "titulo": "5 PKT DENIM RELAXED",
     "descripcion": "pantalon denim 5 bolsillos, de calce relajado, cartera de acceso con cierre, botones y remaches con logos. ",
     "categoria": "Jean",
@@ -36,75 +36,75 @@
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36451/0INHB255019-2.jpg"
   },
   {
-    "id": 5,
+    "idx": 5,
     "titulo": "SLIM TAPER DENIM EVERYDAY INDIGO",
     "descripcion": "pantalon denim 5 bolsillos, de pierna confortable en la parte superior afinando hacia el tobillo sin ajustar. fit slim taper. new!",
     "categoria": "Jean",
     "stock": 7,
-    "precio": 7000,
+    "precio": 7.000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36461/0INHB340071-2.jpg"
   },
   {
-    "id": 6,
+    "idx": 6,
     "titulo": "5 PKT DENIM RELAXED",
     "descripcion": "Pantalón largo a los tobillos, fit relax.",
     "categoria": "Jean",
     "stock": 8,
-    "precio": 5000,
+    "precio": 5.000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36062/0HNHB255084-1.jpg"
   },
   {
-    "id": 7,
+    "idx": 7,
     "titulo": "5 PKT DENIM STRAIGHT",
     "descripcion": "pantalon denim 5 bolsillos, de pierna recta desde cadera a tobillo, detalles en cuero. fit straight.",
     "categoria": "Jean",
     "stock": 2,
-    "precio": 11000,
+    "precio": 11.000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36456/0INHB270026-2.jpg"
   },
   {
-    "id": 8,
+    "idx": 8,
     "titulo": "5 PKT DENIM SKINNY",
     "descripcion": "Pantalón denim 5 bolsillos, y logo bordado en bolsillo trasero.",
     "categoria": "Pantalon",
     "stock": 3,
-    "precio": 4000,
+    "precio": 4.000,
     "imagen": "https://www.penguinargentina.com/uploads/picture/image/36057/0HNHB120019-1.jpg"
   },
   {
-    "id": 9,
+    "idx": 9,
     "titulo": "REMERA ESCOTE V",
     "descripcion": "Remera 100% algodon peinado, con cierre color blanco",
     "categoria": "Remera",
     "stock": 5,
-    "precio": 11000,
+    "precio": 11.000,
     "imagen": "https://i.ibb.co/NL18tjQ/D-NQ-NP-2-X-901281-MLA47932117388-102021-F.webp"
   },
    {
-    "id": 10,
+    "idx": 10,
     "titulo": "REMERA ESCOTE V",
     "descripcion": "Remera 100% algodon peinado, con cierre color bordo",
     "categoria": "Remera",
     "stock": 5,
-    "precio": 11000,
+    "precio": 11.000,
     "imagen": "https://i.ibb.co/BPrGfGK/D-NQ-NP-2-X-939084-MLA47932127281-102021-F.webp"
   },
      {
-    "id": 11,
+    "idx": 11,
     "titulo": "REMERA ESCOTE REDONDO",
     "descripcion": "Remera 100% algodon, con cierre color negro",
     "categoria": "Remera",
     "stock": 9,
-    "precio": 12999,
+    "precio": 12.999,
     "imagen": "https://i.ibb.co/CVnyfDV/D-NQ-NP-2-X-659055-MLA43150558837-082020-F.webp"
   },
     {
-    "id": 12,
+    "idx": 12,
     "titulo": "REMERA ESCOTE V",
     "descripcion": "Remera 100% algodon, con cierre color BLANCA",
     "categoria": "Remera",
     "stock": 12,
-    "precio": 12999,
+    "precio": 12.999,
     "imagen": "https://i.ibb.co/25QbwGn/D-NQ-NP-2-X-754432-MLA31062578275-062019-F.webp"
   }
  ]

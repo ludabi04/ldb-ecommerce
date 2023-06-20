@@ -31,12 +31,13 @@ const ItemCount = ({ stock, inicio, onAdd }) => {
             setItemsStock(itemsStock - items);
             setItems(1);
             setItemAdded(true);
-            onAdd(true);
+            onAdd(items);
             console.log("Seleccionaste: " + items + " Productos al Carrito!\nTe quedan: " + itemsStock + " Productos disponibles!");
 
         };
     }
 
+  
     
     useEffect(() => {
         setItemsStock(stock);
@@ -47,7 +48,6 @@ const ItemCount = ({ stock, inicio, onAdd }) => {
 
     return (
         <div className="botonesAgregar">
-            {<p className="textoCarrito">Carrito : { items }  </p>  }
             <div className="botones">
                 <button onClick={sumar} className="botonOperar">+</button>
                 <p>{ items }</p>
