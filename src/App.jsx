@@ -11,13 +11,13 @@ import Error404 from './components/Error404/Error404';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './components/CartContext/CartContext';
 import Checkout from './components/Checkout/Chekout';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
-    <div className='cuerpo vh-100'>
+    <div>
       <CartContextProvider> 
         <BrowserRouter>
             <NavBar />

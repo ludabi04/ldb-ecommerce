@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import './ItemListContainer.css'
 import Loading from "../Loading/Loading";
 import { getFirestore, query, where, collection, getDocs } from "firebase/firestore"
 
@@ -25,7 +24,7 @@ const ItemListContainer = () => {
 
     return (
 
-        <div className="container my-5">
+        <div className="container ">
             <div className="row justify-content-between ">
                 { loading ? <Loading /> : <ItemList productos={ items } /> }
             </div>
