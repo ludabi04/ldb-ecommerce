@@ -1,10 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { Navigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from "../Loading/Loading";
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -71,6 +70,7 @@ const Checkout = () => {
         const OrdersCollection = collection(db, "ordenes");
         addDoc(OrdersCollection, order).then(resultado => {
             setOrderId(resultado.id);
+    
         })
             .catch(resultado => {
                 console.log('no se pudo completar la operación')

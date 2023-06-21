@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
     const { cart, removeItem, clear, cartTotal, sumTotal } = useContext(CartContext);
+    
 
     if (cartTotal() === 0) {
         return (
@@ -33,7 +34,7 @@ const Cart = () => {
                         <tbody>
                             <tr>
                                 <td colSpan={ 4 }>&nbsp;</td>
-                                <td className="text-end"><button className="btn" onClick={ () => { clear() } } title="Vaciar Carrito">Vaciar Carrito</button></td>
+                                <td className="text-end"><button className="btn btn-danger .bg-gradiant" onClick={ () => { clear() } } title="Vaciar Carrito">Vaciar Carrito</button></td>
                             </tr>
                             {
                                 cart.map(item => (
@@ -47,11 +48,12 @@ const Cart = () => {
                                 ))
                             }
                             <tr>
-                                <td colSpan={ 3 } className="text-end align-middle">Total a Pagar</td>
+                                <td colSpan={ 3 } className="text-end align-middle text-decoration-underline">Total a Pagar</td>
                                 <td className="text-center align-middle">${ sumTotal() }</td>
                             </tr>
                             <tr>
-                                <td className="text-end" colSpan={5}><Link className="btn btn-ligth align-middle" to={ "/checkout" }>Finalizar compra</Link></td>
+                                <td className="text-end" colSpan={ 5 }><Link className="btn btn-info .bt-gradient align-middle" to={ "/checkout" }>Finalizar compra</Link></td>
+                                
                             </tr>
                         </tbody>
                     </table>
