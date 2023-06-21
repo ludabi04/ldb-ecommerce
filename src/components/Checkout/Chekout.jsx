@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../CartContext/CartContext";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { Navigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from "../Loading/Loading";
 
 const Checkout = () => {
     const [nombre, setNombre] = useState("");
@@ -11,6 +12,9 @@ const Checkout = () => {
     const [telefono, setTelefono] = useState("");
     const [orderId, setOrderId] = useState("");
     const { cart, sumTotal } = useContext(CartContext);
+
+   
+
 
     const generarOrden = () => {
         if (nombre.length === 0) {
@@ -56,6 +60,7 @@ const Checkout = () => {
             name: nombre, phone: telefono, email: email
         }
         const items = cart.map(item => ({ id: item.id, title: item.titulo, price: item.precio }))
+        
         const fecha = new Date();
         const date = `${fecha.getDate()}-${fecha.getMonth() + 1}-${fecha.getFullYear()} ${fecha.getHours()}:${fecha.getMinutes()}`;
         const total = sumTotal();
@@ -71,7 +76,6 @@ const Checkout = () => {
                 console.log('no se pudo completar la operación')
             })
     };
-
 
     return (
         <div className="container my-5 vh-100">
@@ -115,8 +119,8 @@ const Checkout = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col text-center">
-                    { orderId ? <Navigate to={ "/gracias/" + orderId } />
+                <div className="col text-center"   >
+                    { orderId ? <Navigate to={ "/gracias/" + orderId }  />
 
                         : "" }
                 </div>

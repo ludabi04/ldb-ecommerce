@@ -10,16 +10,16 @@ const ItemListContainer = () => {
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
 
-      useEffect(() => {
-          const db = getFirestore();
-          const itemsCollection = collection(db, "items");
-          const q = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+        const q = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
 
-          getDocs(q).then(resultado => {
-              setItems(resultado.docs.map((producto) => ({ id: producto.id, ...producto.data() })));
-              setLoading(false)
-          });
-      }, [id]);
+        getDocs(q).then(resultado => {
+            setItems(resultado.docs.map((producto) => ({ id: producto.id, ...producto.data() })));
+            setLoading(false)
+        });
+    }, [id]);
 
 
     return (
